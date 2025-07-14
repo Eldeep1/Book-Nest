@@ -2,7 +2,6 @@ import 'package:Bookly/core/utils/app_router.dart';
 import 'package:Bookly/core/utils/assets.dart';
 import 'package:Bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 
 import 'book_rating.dart';
