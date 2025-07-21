@@ -11,16 +11,16 @@ class BestSellerListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        GestureDetector(
-          onTap: () {
-            GoRouter.of(context).push(AppRouter.kBookDetailsView);
-          },
-          child: SizedBox(
+    return GestureDetector(
+      onTap: () {
+        GoRouter.of(context).push(AppRouter.kBookDetailsView);
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          SizedBox(
             height: 150,
             child: AspectRatio(
               aspectRatio: 2.5 / 4,
@@ -36,29 +36,41 @@ class BestSellerListViewItem extends StatelessWidget {
               ),
             ),
           ),
-        ),
-        const SizedBox(width: 30,),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width* .5,
-                child: Text(
-                  "Harry Potter and the goblet of fire",
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 2,
-                  style: Styles.textStyle20,
+
+          const SizedBox(width: 30),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * .5,
+                  child: Text(
+                    "Harry Potter and the goblet of fire",
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
+                    style: Styles.textStyle20,
+                  ),
                 ),
-              ),
-              const SizedBox(height: 3,),
-              Text("J.K Rowling",style: Styles.textStyle14,),
-              const SizedBox(height: 3,),
-              BookRating(),
-            ],
+                const SizedBox(height: 3),
+                Text("J.K Rowling", style: Styles.textStyle14),
+                const SizedBox(height: 3),
+                Row(
+                  children: [
+                    Text(
+                      '19.99 €',
+                      style: Styles.textStyle20.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const Spacer(),
+                    BookRating(),
+                  ],
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
