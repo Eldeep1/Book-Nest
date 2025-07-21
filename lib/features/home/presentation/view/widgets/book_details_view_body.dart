@@ -3,6 +3,7 @@ import 'package:Bookly/features/home/presentation/view/widgets/book_rating.dart'
 import 'package:Bookly/features/home/presentation/view/widgets/custom_list_view_item.dart';
 import 'package:flutter/material.dart';
 
+import 'books_action.dart';
 import 'custom_book_details_app_bar.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -21,7 +22,7 @@ class BookDetailsViewBody extends StatelessWidget {
             child: FeaturedListViewItem(),
           ),
           const SizedBox(height: 43),
-          Text("The Jungle Book", style: Styles.textStyle30,),
+          Text("The Jungle Book", style: Styles.textStyle30),
           const SizedBox(height: 6),
           Opacity(
             opacity: .7,
@@ -35,6 +36,8 @@ class BookDetailsViewBody extends StatelessWidget {
           ),
           const SizedBox(height: 18),
           const BookRating(),
+          const SizedBox(height: 37),
+          const BooksAction(),
         ],
       ),
     );
