@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 
 class ApiService {
   final _baseURL = 'https://www.googleapis.com/books/v1/';
-  final Dio dio;
-  ApiService(this.dio);
+  final Dio _dio;
+  ApiService(this._dio);
 
   Future<Map<String, dynamic>> get({required String endPoint}) async {
     var response = await dio.get('$_baseURL$endPoint');
