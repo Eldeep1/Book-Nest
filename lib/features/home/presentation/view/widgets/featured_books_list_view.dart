@@ -5,7 +5,7 @@ import 'package:Bookly/features/home/presentation/view_model/featured_books_cubi
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'custom_list_view_item.dart';
+import 'custom_book_image.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
   const FeaturedBooksListView({super.key});
@@ -25,7 +25,7 @@ class FeaturedBooksListView extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: FeaturedListViewItem(imageURL: state.books[index].volumeInfo!.imageLinks!.thumbnail!,),
+                  child: CustomBookImage(imageURL: state.books[index].volumeInfo!.imageLinks!.thumbnail!,),
                 );
               },
             ),
