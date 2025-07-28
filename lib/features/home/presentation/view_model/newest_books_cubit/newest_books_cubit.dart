@@ -3,7 +3,7 @@ import 'package:Bookly/features/home/presentation/view_model/newest_books_cubit/
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class NewestBooksCubit extends Cubit<NewestBooksState> {
-  NewestBooksCubit(super.initialState, {required this.homeRepo});
+  NewestBooksCubit({required this.homeRepo}) : super(NewestBooksInitialState());
   final HomeRepo homeRepo;
 
   Future<void> fetchNewestBooks() async {

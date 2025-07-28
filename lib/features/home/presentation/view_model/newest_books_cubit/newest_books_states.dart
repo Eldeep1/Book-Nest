@@ -3,6 +3,9 @@ import 'package:Bookly/features/home/data/models/book_model.dart';
 abstract class NewestBooksState{
   const NewestBooksState();
 }
+
+class NewestBooksInitialState extends NewestBooksState{}
+
 class NewestBooksLoadingState extends NewestBooksState{}
 
 class NewestBooksSuccessState extends NewestBooksState{
