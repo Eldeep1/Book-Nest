@@ -6,7 +6,7 @@ class ApiService {
   ApiService(this._dio);
 
   Future<Map<String, dynamic>> get({required String endPoint}) async {
-    var response = await dio.get('$_baseURL$endPoint');
+    var response = await _dio.get('$_baseURL$endPoint');
     return response.data;
   }
 }
