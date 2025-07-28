@@ -61,8 +61,11 @@ class BookDetailsSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 18),
-        // Rating was removed due to unavailability of from the API!
-        // const BookRating(),
+        // adding custom values, can't add real values because there's no values getting returned by the API
+        const BookRating(
+          count: 10,
+          rating: 2.2,
+        ),
         const SizedBox(height: 37),
         const BooksAction(),
       ],

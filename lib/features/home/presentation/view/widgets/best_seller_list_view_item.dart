@@ -57,8 +57,11 @@ class BestSellerListViewItem extends StatelessWidget {
                       ),
                     ),
                     const Spacer(),
-                    // Rating was removed due to unavailability of from the API!
-                    // BookRating(),
+                    // adding custom values, can't add real values because there's no values getting returned by the API
+                    BookRating(
+                      rating: 2.2,
+                      count: 0,
+                    ),
                   ],
                 ),
               ],
